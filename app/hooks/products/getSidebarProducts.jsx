@@ -10,12 +10,12 @@ const useGetSidebarProducts = () => {
     try {
       const res = await axiosInstance.get('/categorisedProducts')
       if (!res?.data?.success) {
-        toast.error("Some Error Occured. Please refresh once")
+        // toast.error("Some Error Occured. Please refresh once")
       }
       return [res?.data?.success || false, res?.data?.categorizedProducts || null];
       
     } catch (e) {
-      toast.error("Some Error Occured. Please refresh once")
+      // toast.error("Some Error Occured. Please refresh once")
       return [false, null]
 
     } finally {

@@ -10,13 +10,13 @@ const useGetProductGrid = () => {
             const res = await axiosInstance.get('/featuredProducts');
 
             if (!res?.data?.success) {
-                toast.error("Some Error Occured. Please refresh once")
+                // toast.error("Some Error Occured. Please refresh once")
             }
 
             return [res?.data?.success || false, res?.data?.products || null]
 
         } catch (error) {
-            toast.error("Some Error Occured. Please refresh once");
+            // toast.error("Some Error Occured. Please refresh once");
             return [false, null]
 
         } finally {

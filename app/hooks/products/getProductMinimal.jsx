@@ -11,13 +11,13 @@ const useGetProductMinimal = () => {
             const res = await axiosInstance.get('/newArrival')
 
             if (!res?.data?.success) {
-                toast.error("Some Error Occured. Please refresh once")
+                // toast.error("Some Error Occured. Please refresh once")
             }
 
             return [res?.data?.success || false,res.data || null];
 
         } catch (error) {
-            toast.error("Some Error Occured. Please refresh once")
+            // toast.error("Some Error Occured. Please refresh once")
             return [false,null];
 
         } finally {

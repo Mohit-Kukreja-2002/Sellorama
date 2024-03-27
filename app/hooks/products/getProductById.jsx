@@ -11,14 +11,14 @@ const useGetProductById = () => {
             const response = await axiosInstance.get(`/product/${id}`);
 
             if(!response?.data?.success){
-                toast.error(response.data.error);
+                // toast.error(response.data.error);
                 return [false, null]
             }
 
             return [response?.data?.success || false, response?.data?.product || null]
     
         }catch(e){
-            toast.error("Error fetching the product with id: ",id)
+            // toast.error("Error fetching the product with id: ",id)
             return [false, null]
             
         }finally{

@@ -10,13 +10,13 @@ const useGetDealOfDay = () => {
             const res = await axiosInstance.get('/dealOfDay');
 
             if (!res?.data?.success) {
-                toast.error("Some Error Occured. Please refresh once")
+                // toast.error("Some Error Occured. Please refresh once")
             }
 
             return [res?.data?.success || false, res?.data?.products || null, res?.data?.timeLeft || 86399]
 
         } catch (error) {
-            toast.error("Some Error Occured. Please refresh once");
+            // toast.error("Some Error Occured. Please refresh once");
             return [false, null, 86399];
 
         } finally {
