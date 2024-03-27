@@ -8,7 +8,7 @@ const useGetUser = () => {
         try{
             setLoading(true);
 
-            const response = await axiosInstance.get('/buyerInfo',{
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/buyerInfo`,{
                 withCredentials: true,
             });
             
