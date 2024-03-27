@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components for landing page
-import Banner from './Landing/banner'
+import Banner from './Landing/Banner'
 import Category from './Landing/Category'
 import Testimonials from './Landing/Testimonials'
 import Sidebar from './Landing/Sidebar'
