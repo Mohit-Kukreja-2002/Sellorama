@@ -155,13 +155,13 @@ const DealOfDay = () => {
                                         </h3>
                                     </Link>
                                     <p className="showcase-desc">
-                                        {products[i].description}
+                                        {products[i].description.length > 100 ? `${products[i].description.slice(0, 100)}...` : products[i].description}
                                     </p>
                                     <div className="justify-center price-box">
                                         <p className="price">₹{products[i].price - Math.round((Number(products[i].discount) * Number(products[i].price) / 100))}</p>
                                         <del> ₹{products[i].price}</del>
                                     </div>
-                                    <button onClick={()=>{
+                                    <button onClick={() => {
                                         router.push(`/product/${products[i]._id}`)
                                     }} className="mx-auto add-cart-btn">View Product</button>
                                     <div className="countdown-box">
