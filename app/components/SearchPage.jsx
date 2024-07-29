@@ -70,7 +70,7 @@ const SearchPage = ({ searchQuery }) => {
                     className="product-img default"
                   />
                   <img
-                    src={product.image[1]?.url}
+                    src={product.image[1]?.url || product.image[0]?.url}
                     alt={product.productName}
                     width={300}
                     className="product-img hover"
